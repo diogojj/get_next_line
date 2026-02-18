@@ -1,0 +1,5 @@
+Line one with newline
+Line two with newline
+
+Line four (there was an empty line above)
+Last line without newline at EOF
