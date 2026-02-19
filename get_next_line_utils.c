@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dide-jes <dide-jes@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/19 18:00:45 by dide-jes          #+#    #+#             */
+/*   Updated: 2026/02/19 18:49:54 by dide-jes         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+
 #include "get_next_line.h"
 
 char	*ft_strdup(char *s1)
@@ -36,7 +50,13 @@ char	*ft_substr(char *s, unsigned int start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start > ft_strlen(s))
-		return (malloc(1));
+	{
+		str = malloc(1);
+		if (!str)
+			return (NULL);
+		str[0] = '\0';
+		return (str);
+	}
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	str = malloc((len + 1) * sizeof(char));
