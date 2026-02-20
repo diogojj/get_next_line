@@ -7,7 +7,7 @@
 `get_next_line` is a C function that reads from a file descriptor and returns the next line on each call (including the terminating `\n` when present). The goal is to provide a reliable, memory-safe way to iterate through a stream (file, stdin, etc.) line-by-line without reading the whole file at once.
 
 This repository contains:
-- `get_next_line.c`: the `get_next_line` implementation (also includes a small test `main` at the bottom)
+- `get_next_line.c`: the `get_next_line` implementation
 - `get_next_line_utils.c`: helper functions (`ft_strlen`, `ft_substr`, `ft_strjoin`, `ft_strchr`)
 - `get_next_line.h`: public prototypes and `BUFFER_SIZE` default
 
@@ -15,7 +15,7 @@ This repository contains:
 
 ### Compile
 
-Your current `get_next_line.c` already contains a `main`, so you can compile and run it directly:
+You can compile and run it directly:
 
 ```bash
 cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c -o gnl
